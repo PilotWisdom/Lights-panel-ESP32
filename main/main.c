@@ -9,16 +9,15 @@
 static const char *TAG = "joystick";
 
 // Define 16 Joystick output buttons 
-// 1,2,3 - Start (momentary), Magneto_Left (switch), Magneto_Right(switch)
-// 4,5,6 - Opposite buttons for X-Plane logic
-// 7,8,9,10 - Off, Right, Left, Both key position
-// 11+ - reserved for future use
+// 1 - 5   switches
+// 6 - 10  mirrored switches
+// 11+ Unused
 #define NUM_BUTTONS 16
 
 //Calculate report size
 #define BUTTON_ARRAY_BYTES ((NUM_BUTTONS + 7) / 8)
 
-// 3 physical pins used: Start, L, R
+// 5 physical pins used
 #define NUM_PINS 5
 
 //Switches 1..5 - solder descending
